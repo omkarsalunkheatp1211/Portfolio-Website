@@ -3,7 +3,7 @@ import Image from 'next/image'
 export default function About() {
   const education = [
     {
-      degree: 'Master of Science in Computer Science (MCA)',
+      degree: 'Master of Computer Applications (MCA)',
       school: 'Dr. DY Patil University Ambi | Pune. ',
       period: '2023 - Present',
       description: 'Focusing on advanced software development, cloud computing, and distributed systems.',
@@ -15,7 +15,7 @@ export default function About() {
       ],
     },
     {
-      degree: 'Bachelor of Science in Computer Science (BCA)',
+      degree: 'Bachelor of Computer Applications (BCA)',
       school: 'IMRDA, Sangli, under Bharati Vidyapeeth University, Pune.',
       period: '2020 - 2023',
       description: 'Graduated with honors, focusing on software engineering fundamentals and web development.',
@@ -51,12 +51,12 @@ export default function About() {
               />
             </div>
             <div>
-              <h2 className="text-2xl font-bold text-[#F4EBD0] mb-4">My Journey</h2>
+              <h2 className="text-2xl font-bold text-[#F4EBD0] mb-4">About Me...</h2>
               <p className="text-[#F4EBD0] mb-4">
               I am a final-year MCA student with a strong passion for computer science and technology. While I am a fresher, I have developed a solid foundation in programming, database management, and software development throughout my studies. I am proficient in MERN stack, Java, Git, Ansible, and Linux.
               </p>
               <p className="text-[#F4EBD0]">
-              Driven by a continuous desire to expand my knowledge, I am eager to contribute to the tech world and make a positive impact. I enjoy solving programming challenges on platforms like Leetcode and collaborating with peers on innovative projects. I believe in the power of continuous learning and teamwork to succeed in the tech industry.
+              Driven by a continuous desire to expand my knowledge, I am eager to contribute to the tech world and make a positive impact. I enjoy solving programming challenges on platforms like Leetcode and collaborating with peers on innovative projects.
               </p>
               
             </div>

@@ -28,7 +28,7 @@ export default function Projects() {
     },
     {
       title: 'System Monitoring Scripts',
-      description: 'This repository contains two bash scripts for monitoring system resources on a Linux system.',
+      description: 'Monitoring system resources on a Linux system.',
       image: '/images/projects/4.png',
       technologies: ['Bash Scripting', 'Linux', 'Postfix'],
       liveUrl: 'https://github.com/omkarsalunkheatp1211/System_Monitoring_Shell_Scripts.git',
@@ -36,7 +36,7 @@ export default function Projects() {
     },
     {
       title: 'User Management Scripts',
-      description: 'This repository contains two bash scripts for user management on a Linux system, The script automates the process of creating user accounts on a Linux system.',
+      description: 'User management on a Linux system, The script automates the process of creating user accounts on a Linux system.',
       image: '/images/projects/5.png',
       technologies: ['Bash Scripting', 'Linux', 'Postfix','OpenSSL'],
       liveUrl: 'https://github.com/omkarsalunkheatp1211/User_Management_Shell_Scripts.git',

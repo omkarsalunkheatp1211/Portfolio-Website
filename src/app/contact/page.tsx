@@ -99,7 +99,7 @@ export default function Contact() {
                 </svg>
                 <div>
                   <h3 className="text-lg font-semibold text-[#F4EBD0]">Location</h3>
-                  <p className="text-[#B68D40]">Sangli</p>
+                  <p className="text-[#B68D40]">Sangli, Maharashtra, India</p>
                 </div>
               </div>
               <div className="flex items-start space-x-4">
@@ -222,11 +222,10 @@ export default function Contact() {
             </form>
             {status.message && (
               <div
-                className={`mt-4 p-4 rounded-md ${
-                  status.type === 'success'
+                className={`mt-4 p-4 rounded-md ${status.type === 'success'
                     ? 'bg-[#B68D40] bg-opacity-20 text-[#F4EBD0]'
                     : 'bg-[#D6AD60] bg-opacity-20 text-[#F4EBD0]'
-                }`}
+                  }`}
               >
                 {status.message}
               </div>

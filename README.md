@@ -6,6 +6,7 @@ A modern, responsive portfolio website built with Next.js, TypeScript, and Tailw
 
 - [Features](#features)
 - [Technologies Used](#technologies-used)
+- [Screenshot](#Screenshot)
 - [Setup](#setup)
   - [Prerequisites](#prerequisites)
   - [Installation Steps](#installation-steps)
@@ -30,6 +31,9 @@ A modern, responsive portfolio website built with Next.js, TypeScript, and Tailw
 - **Styling**: Tailwind CSS
 - **UI Library**: React 18
 - **Version Control**: Git
+
+## Screenshot
+![Screenshot (17)](https://github.com/user-attachments/assets/c71f0493-c868-44c0-9842-be24432cd4ba)
 
 ## Setup
 
