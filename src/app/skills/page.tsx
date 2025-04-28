@@ -5,31 +5,30 @@ export default function Skills() {
     {
       title: 'Frontend Development',
       skills: [
-        { name: 'React', icon: '/images/skills/react.png' },
-        { name: 'JavaScript', icon: '/images/skills/javascript.png' },
-        { name: 'HTML', icon: '/images/skills/html.png' },
-        { name: 'CSS', icon: '/images/skills/css.png' },
-        { name: 'Bootstrap', icon: '/images/skills/bootstrap.png' },
+        { name: 'JavaFX', icon: '/images/skills/java-brands.png' },
+        { name: 'React', icon: '/images/skills/react-brands.png' },
+        { name: 'JavaScript', icon: '/images/skills/js-brands.png' },
+        { name: 'HTML', icon: '/images/skills/html5-brands.png' },
+        { name: 'CSS', icon: '/images/skills/css3-brands.png' },
+        { name: 'Bootstrap', icon: '/images/skills/bootstrap-brands.png' },
       ],
     },
     {
       title: 'Backend Development',
       skills: [
-        { name: 'Java', icon: '/images/skills/java.png' },
-        { name: 'Node.js', icon: '/images/skills/nodejs.png' },
-        { name: 'Express.js', icon: '/images/skills/express.png' },
-        { name: 'MongoDB', icon: '/images/skills/mongodb.png' },
-        { name: 'SQL', icon: '/images/skills/sql.png' },
+        { name: 'Java', icon: '/images/skills/java-brands.png' },
+        { name: 'Node.js', icon: '/images/skills/node-brands.png' },
+        { name: 'Express.js', icon: '/images/skills/express-js-brands.png' },
+        { name: 'MongoDB', icon: '/images/skills/database-solid.png' },
+        { name: 'SQL', icon: '/images/skills/database-solid.png' },
       ],
     },
     {
       title: 'Tools & Technologies',
       skills: [
-        { name: 'Git', icon: '/images/skills/git.png' },
-        { name: 'VS Code', icon: '/images/skills/vscode.png' },
-        { name: 'Docker', icon: '/images/skills/docker.png' },
-        { name: 'Red Hat Linux', icon: '/images/skills/redhat.png' },
-        { name: 'Ansible', icon: '/images/skills/ansible.png' },
+        { name: 'Git', icon: '/images/skills/git-alt-brands.png' },
+        { name: 'Docker', icon: '/images/skills/docker-brands.png' },
+        { name: 'Red Hat Linux', icon: '/images/skills/redhat-brands.png' },
         { name: 'Shell Scripting', icon: '/images/skills/shell.png' },
       ],
     },
@@ -60,9 +59,9 @@ export default function Skills() {
                 {category.skills.map((skill, skillIndex) => (
                   <div
                     key={skillIndex}
-                    className="flex flex-col items-center bg-[#B68D40] p-4 rounded-lg hover:bg-[#D6AD60] transition-colors duration-200"
-                  >
-                    <div className="relative w-12 h-12 mb-2">
+                    className="group flex flex-col items-center bg-[#122620] p-4 rounded-lg border border-[#1e3a2f] hover:bg-[#1e3a2f] hover:border-[#264d3b] transition-colors duration-200">
+
+                    <div className="relative w-12 h-12 mb-2 transition-transform duration-200 group-hover:scale-110">
                       <Image
                         src={skill.icon}
                         alt={skill.name}
@@ -70,7 +69,8 @@ export default function Skills() {
                         className="object-contain"
                       />
                     </div>
-                    <span className="text-[#F4EBD0] text-sm font-medium text-center">
+
+                    <span className="text-[#F4EBD0] text-sm font-medium text-center transition-all duration-200 group-hover:font-bold">
                       {skill.name}
                     </span>
                   </div>

@@ -11,7 +11,7 @@ export default function Home() {
               Hi, I'm Omkar Salunkhe
             </h1>
             <p className="text-xl mb-6">
-            I’m a passionate software developer with expertise in building responsive web applications. I enjoy turning complex problems into simple, beautiful, and intuitive designs. Let's work together to create something amazing!
+              I’m a passionate software developer with expertise in building responsive web applications. I enjoy turning complex problems into simple, beautiful, and intuitive designs. Let's work together to create something amazing!
             </p>
             <div className="space-x-4">
               <Link
@@ -38,13 +38,10 @@ export default function Home() {
             <div>
               <h2 className="text-3xl font-bold mb-6 text-[#122620]">About Me</h2>
               <p className="text-[#122620] mb-4">
-                I'm a Computer Science student with a passion for web development
-                and software engineering. I love building modern web applications
-                using cutting-edge technologies.
+                I'm a Computer Science student and passionate Software Developer with experience in Java, JavaFX, MERN Stack, and SQL. I enjoy building modern web applications and desktop software using cutting-edge technologies.
               </p>
               <p className="text-[#122620] mb-6">
-                Currently pursuing my Master of Computer Applications, focusing on
-                advanced software development, cloud technologies, virtualization and advanced data structures and algorithms
+                Currently pursuing my MCA, I focus on advanced development, cloud technologies, and algorithms, while interning as a Java Developer at TechnoNexis.
               </p>
               <Link
                 href="/about"
@@ -56,11 +53,10 @@ export default function Home() {
             <div>
               <h2 className="text-3xl font-bold mb-6 text-[#122620]">Featured Skills</h2>
               <div className="grid grid-cols-2 gap-4">
-                {['Java', 'React', 'JavaScript', 'MongoDB', 'Git', 'Linux'].map((skill) => (
+                {['JavaFX','Java', 'React', 'SQL','MongoDB', 'Git'].map((skill) => (
                   <div
                     key={skill}
-                    className="bg-[#D6AD60] rounded-lg p-4 text-center text-[#122620] hover:bg-[#B68D40] transition-colors duration-200"
-                  >
+                    className="border-2 border-[#D6AD60] text-[#122620] px-4 py-2 rounded-lg font-medium text-center hover:bg-[#D6AD60] hover:text-[#F4EBD0] transition-colors duration-200">
                     {skill}
                   </div>
                 ))}

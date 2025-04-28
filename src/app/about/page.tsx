@@ -1,6 +1,33 @@
 import Image from 'next/image'
 
 export default function About() {
+  const experience = [
+    {
+      profile: 'Java Software Developer - Intern',
+      company: 'TechnoNexis',
+      period: 'Mar 2025 - Present',
+      description: 'Designed and developed interactive front-end components using JavaFX for enterprise-level applications.Integrated APIs and worked on designing responsive and user-friendly UI/UX workflows.', 
+      skills: [
+        'JavaFX',
+        'Research Skills',
+        'User Interface Design',
+        'API',
+      ],
+    },
+    {
+      profile: 'MERN Stack - Intern',
+      company: 'Edunet Foundation',
+      period: 'Feb 2025 - Mar 2025 (6 weeks)',
+      description: 'Participated in a 6-week internship program focused on building full-stack web applications using the MERN stack. Gained hands-on experience in developing and deploying web applications, enhancing my skills in JavaScript, React.js, Node.js, and MongoDB.', 
+      skills: [
+        'React.js',
+        'MongoDB',
+        'Express.js',
+        'Node.js',
+      ],
+    },
+  ]
+  
   const education = [
     {
       degree: 'Master of Computer Applications (MCA)',
@@ -52,20 +79,50 @@ export default function About() {
             </div>
             <div>
               <h2 className="text-2xl font-bold text-[#F4EBD0] mb-4">About Me...</h2>
-              <p className="text-[#F4EBD0] mb-4">
-              I am a final-year MCA student with a strong passion for computer science and technology. While I am a fresher, I have developed a solid foundation in programming, database management, and software development throughout my studies. I am proficient in MERN stack, Java, Git, Ansible, and Linux.
+              <p className="text-[#F4EBD0] mb-2">
+                I am a passionate and results-driven Software Developer and final-year MCA student with a strong foundation in computer science, programming, database management, and software development. I specialize in Java, JavaFX, the MERN Stack, SQL, Git, Ansible, and Linux, with hands-on experience in building desktop applications, front-end interfaces, and full-stack web projects.
               </p>
-              <p className="text-[#F4EBD0]">
-              Driven by a continuous desire to expand my knowledge, I am eager to contribute to the tech world and make a positive impact. I enjoy solving programming challenges on platforms like Leetcode and collaborating with peers on innovative projects.
+              <p className="text-[#F4EBD0] mb-2">
+                Currently, I am working as a Java Software Developer Intern at TechnoNexis, contributing to JavaFX UI/UX development and project research, including API integration and technology evaluation. I actively sharpen my skills by solving challenges on LeetCode and collaborating with peers on innovative projects.
               </p>
-              
+
+              <p className="text-[#F4EBD0] mb-2">
+                Eager to continuously expand my knowledge, I aspire to a challenging software development role where I can deliver impactful, scalable solutions and make a positive contribution to the tech world.
+              </p>
+
             </div>
+          </div>
+        </div>
+
+        {/* Experience Section */}
+        <div>
+          <h2 className="text-2xl font-bold text-[#122620] mb-6">Experience</h2>
+          <div className="space-y-8">
+            {experience.map((item, index) => (
+              <div key={index} className="bg-[#122620] rounded-lg shadow-md p-6">
+                <h3 className="text-xl font-semibold text-[#F4EBD0]">{item.profile}</h3>
+                <p className="text-[#D6AD60] mt-1">{item.company}</p>
+                <p className="text-[#B68D40] text-sm mt-1">{item.period}</p>
+                <p className="text-[#F4EBD0] mt-4">{item.description}</p>
+                <div className="mt-4">
+                  <h4 className="text-[#D6AD60] font-medium mb-2">Key skills:</h4>
+                  <ul className="grid grid-cols-1 md:grid-cols-2 gap-2">
+                    {item.skills.map((skills, i) => (
+                      <li key={i} className="text-[#F4EBD0] flex items-start">
+                        <span className="text-[#B68D40] mr-2">•</span>
+                        {skills}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
 
         {/* Education Section */}
         <div>
-          <h2 className="text-2xl font-bold text-[#122620] mb-6">Education</h2>
+          <h2 className="text-2xl font-bold text-[#122620] mb-6 mt-12">Education</h2>
           <div className="space-y-8">
             {education.map((item, index) => (
               <div key={index} className="bg-[#122620] rounded-lg shadow-md p-6">
