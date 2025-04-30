@@ -15,8 +15,8 @@ export default function About() {
       ],
     },
     {
-      profile: 'MERN Stack - Intern',
-      company: 'Edunet Foundation',
+      profile: 'Full Stack Developer - Intern',
+      company: 'Edunet Foundation collaboration with EY Global Delivery Services',
       period: 'Feb 2025 - Mar 2025 (6 weeks)',
       description: 'Participated in a 6-week internship program focused on building full-stack web applications using the MERN stack. Gained hands-on experience in developing and deploying web applications, enhancing my skills in JavaScript, React.js, Node.js, and MongoDB.', 
       skills: [

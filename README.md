@@ -26,11 +26,10 @@ A modern, responsive portfolio website built with Next.js, TypeScript, and Tailw
 
 ## Technologies Used
 
-- **Frontend Framework**: Next.js 14
+- **Frontend Framework**: Next.js
 - **Programming Language**: TypeScript
 - **Styling**: Tailwind CSS
-- **UI Library**: React 18
-- **Version Control**: Git
+- **UI Library**: React
 
 ## Screenshot
 ![Screenshot (17)](https://github.com/user-attachments/assets/c71f0493-c868-44c0-9842-be24432cd4ba)

@@ -56,8 +56,7 @@ export default function Home() {
                 {['JavaFX','Java', 'React', 'SQL','MongoDB', 'Git'].map((skill) => (
                   <div
                     key={skill}
-                    className="border-2 border-[#D6AD60] text-[#122620] px-4 py-2 rounded-lg font-medium text-center hover:bg-[#D6AD60] hover:text-[#F4EBD0] transition-colors duration-200">
-                    {skill}
+                    className="border-2 border-[#D6AD60] text-[#122620] px-4 py-2 rounded-lg font-medium text-center hover:bg-[#D6AD60] hover:text-[#F4EBD0] transition-colors duration-200 cursor-pointer">                    {skill}
                   </div>
                 ))}
               </div>

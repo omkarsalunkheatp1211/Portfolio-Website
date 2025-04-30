@@ -9,26 +9,8 @@ export default function Contact() {
     subject: '',
     message: '',
   })
-
-  const [status, setStatus] = useState({
-    type: '',
-    message: '',
-  })
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setStatus({ type: 'info', message: 'Sending message...' })
-
-    // Here you would typically send the form data to your backend
-    // For now, we'll just simulate a successful submission
-    setTimeout(() => {
-      setStatus({
-        type: 'success',
-        message: 'Message sent successfully! I will get back to you soon.',
-      })
-      setFormData({ name: '', email: '', subject: '', message: '' })
-    }, 1000)
-  }
+  
+  const [copied, setCopied] = useState(false)
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -38,6 +20,39 @@ export default function Contact() {
       ...prev,
       [name]: value,
     }))
+  }
+
+  // Function to handle email sending
+  const handleSendEmail = (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault()
+    
+    const recipient = 'omkarsalunkheatp1211@gmail.com'
+    const subject = formData.subject || 'Contact from Portfolio Website'
+    const body = `I'm ${formData.name} my email id is ${formData.email}\n\n${formData.message}`
+    
+    // Create a direct Gmail compose URL
+    const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${recipient}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
+    
+    // Open Gmail in a new tab
+    window.open(gmailUrl, '_blank')
+  }
+  
+  // Function to copy email and message to clipboard
+  const copyToClipboard = () => {
+    const recipient = 'omkarsalunkheatp1211@gmail.com'
+    const subject = formData.subject || 'Contact from Portfolio Website'
+    const body = `I'm ${formData.name} my email id is ${formData.email}\n\n${formData.message}`
+    
+    const textToCopy = `Email: ${recipient}\nSubject: ${subject}\n\n${body}`
+    
+    navigator.clipboard.writeText(textToCopy)
+      .then(() => {
+        setCopied(true)
+        setTimeout(() => setCopied(false), 2000)
+      })
+      .catch(err => {
+        console.error('Failed to copy text: ', err)
+      })
   }
 
   return (
@@ -144,7 +159,7 @@ export default function Contact() {
           {/* Contact Form */}
           <div className="bg-[#122620] rounded-lg shadow-md p-6">
             <h2 className="text-2xl font-bold text-[#F4EBD0] mb-6">Send Message</h2>
-            <form onSubmit={handleSubmit} className="space-y-4">
+            <div className="space-y-4">
               <div>
                 <label
                   htmlFor="name"
@@ -158,8 +173,8 @@ export default function Contact() {
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
-                  required
                   className="w-full px-4 py-2 bg-[#F4EBD0] border border-[#B68D40] rounded-md focus:ring-[#D6AD60] focus:border-[#D6AD60] text-[#122620]"
+                  placeholder="Your name"
                 />
               </div>
               <div>
@@ -175,8 +190,8 @@ export default function Contact() {
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
-                  required
                   className="w-full px-4 py-2 bg-[#F4EBD0] border border-[#B68D40] rounded-md focus:ring-[#D6AD60] focus:border-[#D6AD60] text-[#122620]"
+                  placeholder="Your email"
                 />
               </div>
               <div>
@@ -192,8 +207,8 @@ export default function Contact() {
                   name="subject"
                   value={formData.subject}
                   onChange={handleChange}
-                  required
                   className="w-full px-4 py-2 bg-[#F4EBD0] border border-[#B68D40] rounded-md focus:ring-[#D6AD60] focus:border-[#D6AD60] text-[#122620]"
+                  placeholder="Email subject"
                 />
               </div>
               <div>
@@ -208,28 +223,36 @@ export default function Contact() {
                   name="message"
                   value={formData.message}
                   onChange={handleChange}
-                  required
                   rows={4}
                   className="w-full px-4 py-2 bg-[#F4EBD0] border border-[#B68D40] rounded-md focus:ring-[#D6AD60] focus:border-[#D6AD60] text-[#122620]"
+                  placeholder="Your message"
                 ></textarea>
               </div>
-              <button
-                type="submit"
-                className="w-full bg-[#B68D40] text-[#F4EBD0] py-2 px-4 rounded-md hover:bg-[#D6AD60] transition-colors duration-200"
-              >
-                Send Message
-              </button>
-            </form>
-            {status.message && (
-              <div
-                className={`mt-4 p-4 rounded-md ${status.type === 'success'
-                    ? 'bg-[#B68D40] bg-opacity-20 text-[#F4EBD0]'
-                    : 'bg-[#D6AD60] bg-opacity-20 text-[#F4EBD0]'
-                  }`}
-              >
-                {status.message}
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                <button
+                  onClick={handleSendEmail}
+                  className="w-full bg-[#B68D40] text-[#F4EBD0] py-2 px-4 rounded-md hover:bg-[#D6AD60] transition-colors duration-200"
+                >
+                  Open in Gmail
+                </button>
+                
+                <button
+                  onClick={copyToClipboard}
+                  className="border-2 border-[#B68D40] text-[#F4EBD0] px-6 py-2 rounded-lg font-medium hover:bg-[#B68D40] transition-colors duration-200"
+                >
+                  {copied ? "Copied!" : "Copy Message"}
+                </button>
               </div>
-            )}
+              
+              <div className="mt-4 text-center">
+                <p className="text-[#F4EBD0] text-sm">
+                  You can also email me directly at: <a href="mailto:omkarsalunkheatp1211@gmail.com" className="text-[#D6AD60] hover:underline">
+                    omkarsalunkheatp1211@gmail.com
+                  </a>
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
