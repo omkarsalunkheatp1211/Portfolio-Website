@@ -32,7 +32,8 @@ A modern, responsive portfolio website built with Next.js, TypeScript, and Tailw
 - **UI Library**: React
 
 ## Screenshot
-![Screenshot (17)](https://github.com/user-attachments/assets/c71f0493-c868-44c0-9842-be24432cd4ba)
+![image](https://github.com/user-attachments/assets/c5ca8420-287b-438e-8b70-a09ecf374bd1)
+
 
 ## Setup
 
